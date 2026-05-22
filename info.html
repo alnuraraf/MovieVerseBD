@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StreamVault - Details</title>
-    <meta name="description" content="Movie and TV show details on StreamVault">
+    <title>BD Movies - Details</title>
+    <meta name="description" content="Movie and TV show details on BD Movies">
     <link rel="preconnect" href="https://api.themoviedb.org">
     <link rel="preconnect" href="https://image.tmdb.org">
     <style>
@@ -209,7 +209,7 @@
             .card{width:120px}
         }
     </style>
-<base target="_blank">
+<base >
 </head>
 <body>
     <div class="page-loader" id="pageLoader"><div class="loader-ring"></div><div class="loader-text">Loading Details</div></div>
@@ -217,7 +217,7 @@
     <header class="header" id="header">
         <div class="header-left">
             <div class="menu-btn" id="menuBtn" onclick="toggleSidebar()"><span></span><span></span><span></span></div>
-            <a href="index.html" class="logo">StreamVault</a>
+            <a href="https://www.bdmovs.eu.org" class="logo">BD Movies</a>
         </div>
         <div class="header-right">
             <button class="search-btn" onclick="openSearch()" aria-label="Search">
@@ -229,7 +229,7 @@
     <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
     <nav class="sidebar" id="sidebar">
         <h3>Discover</h3>
-        <a href="index.html"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Home</a>
+        <a href="https://www.bdmovs.eu.org"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Home</a>
         <a href="trending.html"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>Trending</a>
         <a href="search.html"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>Search</a>
         <h3>Movies</h3>
@@ -327,8 +327,8 @@
             <a href="https://discord.com" target="_blank"><svg viewBox="0 0 24 24"><path d="M18 9a5 5 0 0 0-4-2 5 5 0 0 0-4 2"/><path d="M6 9a5 5 0 0 1 4-2 5 5 0 0 1 4 2"/><path d="M6 9v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V9"/><path d="M12 11v.01"/></svg></a>
             <a href="https://telegram.org" target="_blank"><svg viewBox="0 0 24 24"><path d="M21.198 2.433a2.242 2.242 0 0 0-1.022.215l-16.09 6.2c-.66.253-.66.994-.003 1.248l4.192 1.588 1.588 4.192c.254.657.995.657 1.248.003l6.2-16.09a2.242 2.242 0 0 0-1.113-3.356z"/><path d="m9.5 14.5 5-5"/><path d="m14.5 9.5-5 5"/></svg></a>
         </div>
-        <div class="footer-credits">StreamVault - Premium Streaming Experience</div>
-        <div class="footer-copy">&copy; 2026 StreamVault. All rights reserved. Data provided by TMDB.</div>
+        <div class="footer-credits">BD Movies - Premium Streaming Experience</div>
+        <div class="footer-copy">&copy; 2026 BD Movies. All rights reserved. Data provided by TMDB.</div>
     </footer>
 
     <script>
@@ -361,7 +361,7 @@
     const mediaType=params.get('type')||'movie';
     const isTV=mediaType==='tv';
 
-    function goTo(type,id){window.location.href=`${type==='tv'?'tv-show.html':'movie.html'}?id=${id}&type=${type}`}
+    function goTo(type,id){window.location.href=`${type==='tv'?'info.html':'info.html'}?id=${id}&type=${type}`}
     function goToWatch(type,id,s=1,e=1){window.location.href=`watch.html?id=${id}&type=${type}${type==='tv'?`&s=${s}&e=${e}`:''}`}
 
     function toggleSidebar(){document.getElementById('sidebar').classList.toggle('open');document.getElementById('sidebarOverlay').classList.toggle('active');document.getElementById('menuBtn').classList.toggle('active')}
@@ -474,7 +474,7 @@
             document.getElementById('track-sim').innerHTML=simItems.length?simItems.map(item=>createCard(item,item.media_type||mediaType)).join(''):'<div style="color:var(--text-muted);padding:20px">No similar titles available</div>';
             initSliderDrag('sim');
 
-            document.title=`${d.title||d.name||'Details'} - StreamVault`;
+            document.title=`${d.title||d.name||'Details'} - BD Movies`;
         }catch(e){
             document.getElementById('detailInfo').innerHTML=`<div style="color:#ef4444"><h2>Error loading details</h2><p>${e.message}</p><button class="btn-primary" onclick="loadDetails()" style="margin-top:16px">Retry</button></div>`;
             console.error(e);
