@@ -385,7 +385,7 @@
     // ===== NAVIGATION =====
     function goTo(type,id,mediaType){
         const isTV=mediaType==='tv'||type==='tv';
-        const page=isTV?'tv-show.html':'movie.html';
+        const page=isTV?'info.html':'info.html';
         window.location.href=`${page}?id=${id}`;
     }
     function goToWatch(type,id,s=1,e=1){
