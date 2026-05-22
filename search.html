@@ -276,7 +276,7 @@
 
     let currentPage=1,totalPages=1,isLoading=false,currentQuery='',currentType='';
 
-    function goTo(type,id){window.location.href=`${type==='tv'?'https://www.bdmovs.eu.org':'https://www.bdmovs.eu.org'}?id=${id}&type=${type}`}
+    function goTo(type,id){window.location.href=`${type==='tv'?'info.html':'info.html'}?id=${id}&type=${type}`}
     function toggleSidebar(){document.getElementById('sidebar').classList.toggle('open');document.getElementById('sidebarOverlay').classList.toggle('active');document.getElementById('menuBtn').classList.toggle('active')}
     function openSearch(){const q=document.getElementById('searchInput').value.trim();if(q)window.location.href=`search.html?q=${encodeURIComponent(q)}`}
 
