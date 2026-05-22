@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>StreamVault — Watch</title>
+<title>BD Movies — Watch</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -250,7 +250,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     Back
   </a>
   <div class="header-title" id="header-title">Loading…</div>
-  <a href="index.html" class="header-logo">StreamVault</a>
+  <a href="https://www.bdmovs.eu.org" class="header-logo">BD Movies</a>
 </header>
 
 <div id="watch-layout">
@@ -527,7 +527,7 @@ async function init() {
 
   mediaDetail = d;
   const title = d.title || d.name || 'Unknown';
-  document.title = `${title} — StreamVault`;
+  document.title = `${title} — BD Movies`;
   document.getElementById('header-title').textContent = title;
   document.getElementById('ctrl-title').textContent = title;
   updateSubtitle();
