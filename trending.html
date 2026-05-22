@@ -273,14 +273,14 @@ function createCard(item,type){
   const title=item.title||item.name||'Unknown';
   const year=getYear(item.release_date||item.first_air_date);
   const rating=getRating(item.vote_average);
-  return `<div class="media-card" onclick="window.location.href='movie.html?id=${item.id}&type=${type}'">
+  return `<div class="media-card" onclick="window.location.href='info.html?id=${item.id}&type=${type}'">
     <img class="card-poster" src="${imgUrl(item.poster_path,'w342')}" alt="${title}" loading="lazy" onerror="this.src='https://via.placeholder.com/160x240/0f0f1a/7c3aed?text=?'">
     <div class="card-badges">
       <span class="card-badge card-badge-hd">HD</span>
       <span class="card-badge card-badge-rating">⭐ ${rating}</span>
     </div>
     <div class="card-overlay">
-      <a href="watch.html?id=${item.id}&type=${type}" class="card-play-btn" onclick="event.stopPropagation()">
+      <a href="info.html?id=${item.id}&type=${type}" class="card-play-btn" onclick="event.stopPropagation()">
         <svg viewBox="0 0 24 24" fill="white" width="16" height="16"><polygon points="5 3 19 12 5 21 5 3"/></svg>
       </a>
       <div class="card-title-overlay">${truncate(title,28)}</div>
@@ -315,7 +315,7 @@ function createRankingSection(title,items,type){
         const t=item.title||item.name||'Unknown';
         const y=getYear(item.release_date||item.first_air_date);
         const r=getRating(item.vote_average);
-        return `<div class="rank-card" onclick="window.location.href='movie.html?id=${item.id}&type=${type}'">
+        return `<div class="rank-card" onclick="window.location.href='info.html?id=${item.id}&type=${type}'">
           <div class="rank-num${i<3?' top3':''}">${i+1}</div>
           <img class="rank-poster" src="${imgUrl(item.poster_path,'w185')}" alt="${t}" loading="lazy" onerror="this.src='https://via.placeholder.com/60x90/0f0f1a/7c3aed?text=?'">
           <div class="rank-info">
