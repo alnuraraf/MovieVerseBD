@@ -822,7 +822,7 @@ async function performSearch(q) {
 }
 
 function goTo(type, id) {
-  window.location.href = `movie.html?id=${id}&type=${type}`;
+  window.location.href = `info.html?id=${id}&type=${type}`;
 }
 
 /* ============================================
@@ -1035,7 +1035,7 @@ function createCard(item, type) {
   const year = getYear(item.release_date || item.first_air_date);
   const rating = getRating(item.vote_average);
   return `
-  <div class="media-card" onclick="window.location.href='movie.html?id=${item.id}&type=${type}'">
+  <div class="media-card" onclick="window.location.href='info.html?id=${item.id}&type=${type}'">
     <img class="card-poster" src="${imgUrl(item.poster_path,'w342')}" alt="${title}" loading="lazy" onerror="this.src='https://via.placeholder.com/200x300/0f0f1a/7c3aed?text=No+Image'">
     <div class="card-badges">
       <span class="card-badge card-badge-hd">HD</span>
