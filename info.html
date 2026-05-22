@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>StreamVault — Details</title>
+<title>BD Movies — Details</title>
 <meta name="description" content="View movie and TV show details, cast, trailers and more.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -288,12 +288,12 @@ section + section { margin-top: 48px; }
 </div>
 
 <header id="header">
-  <a href="index.html" class="header-back">
+  <a href="https://www.bdmovs.eu.org" class="header-back">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
     Back
   </a>
   <div class="header-spacer"></div>
-  <a href="index.html" class="header-logo">StreamVault</a>
+  <a href="https://www.bdmovs.eu.org" class="header-logo">BD Movies</a>
 </header>
 
 <section id="detail-hero">
@@ -307,8 +307,8 @@ section + section { margin-top: 48px; }
 <main id="main-detail"></main>
 
 <footer style="background:var(--bg2);border-top:1px solid var(--border);padding:30px 24px;text-align:center;">
-  <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:3px;background:linear-gradient(135deg,var(--neon),var(--neon2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:12px;">StreamVault</div>
-  <p style="font-size:13px;color:var(--text3);">© 2025 <span style="color:var(--purple2)">StreamVault</span>. Data provided by <span style="color:var(--purple2)">TMDB</span>.</p>
+  <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:3px;background:linear-gradient(135deg,var(--neon),var(--neon2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:12px;">BD Movies</div>
+  <p style="font-size:13px;color:var(--text3);">© 2025 <span style="color:var(--purple2)">BD Movies</span>. Data provided by <span style="color:var(--purple2)">TMDB</span>.</p>
 </footer>
 
 <script>
@@ -375,7 +375,7 @@ async function loadDetail() {
 
     // Title
     const title = d.title || d.name || 'Unknown';
-    document.title = `${title} — StreamVault`;
+    document.title = `${title} — BD Movies`;
 
     // Backdrop
     if (d.backdrop_path) {
@@ -497,7 +497,7 @@ async function loadDetail() {
 
   } catch (e) {
     console.error('Detail error:', e);
-    document.getElementById('detail-content').innerHTML = `<div style="color:var(--text2);padding:40px">Failed to load content. <a href="index.html" style="color:var(--purple2)">Go Home</a></div>`;
+    document.getElementById('detail-content').innerHTML = `<div style="color:var(--text2);padding:40px">Failed to load content. <a href="https://www.bdmovs.eu.org" style="color:var(--purple2)">Go Home</a></div>`;
   }
 }
 
